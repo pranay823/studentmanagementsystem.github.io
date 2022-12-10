@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+ <style>
+    .center {
+ text-align: center;
+ background: black;
+ color: #fff;
+ padding: 15px;
+}
+.skills {
+    padding-top: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.skillsCont {
+    margin: 20px 0px 0px 0px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.skillsCont .title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+}
+.skillsCont .slider {
+    height: 8px;
+    background-color: rgb(85, 73, 241, .5);
+    border-radius: 50em;
+    width: 100%;
+}
+.skillsCont .slider div {
+    height: 8px;
+    background-color: rgb(85, 73, 241);
+    border-radius: 50em;
+}
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+
+
+
+
+.course {
+    align-content: center;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 34px 0px 0px 380px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.course-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.course-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.progress-container {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	text-align: right;
+	width: 150px;
+}
+
+.progress {
+	background-color: #ddd;
+	border-radius: 3px;
+	height: 5px;
+	width: 100%;
+}
+
+.progress::after {
+	border-radius: 3px;
+	background-color: #2A265F;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 66%;
+}
+
+.progress-text {
+	font-size: 10px;
+	opacity: 0.6;
+	letter-spacing: 1px;
+}
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+}
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #97A5CE;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #001F61;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #97A5CE;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: #001F61;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: #FF6A00;
+	box-shadow: 0 9px 12px -9px #FF6A00;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #001F61;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	z-index: 998;
+}
+
+.floating-text a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
+
+ </style>
+   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style3.css" />
+    <meta charset="UTF-8">
+    <title>Student</title>
+     <link rel="stylesheet" href="/css/home.css">
+        
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  </head>
+  <div class="sidebar close">
+    <div class="logo-details">
+<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+      <span class="logo_name">Student</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <span class="link_name">Timetable</span>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Timetable</a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <a href="idcard.php">
+      <i class="fa fa-book" aria-hidden="true"></i>
+          <span class="link_name">Attendance</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Attendance</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+        <i class="fa fa-money" aria-hidden="true"></i>
+
+          <span class="link_name">Fees</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Fees</a></li>
+        </ul>
+      </li>
+     
+    
+      <li>
+        <a href="#">
+       <i class="fa fa-user" aria-hidden="true"></i>
+
+          <span class="link_name">Profile</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Profile</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="profile-details">
+      <div class="profile-content"></div>
+        <img src="/image/studentlogo.jpeg" alt ="Image" style="width: 55px; height: 55px;" >
+      </div>
+     
+
+
+      </div>
+      
+    </div>
+  </li>
+</ul>
+  </div>
+
+  <h1 class="center">Attendance Report </h1>
+	
+  <div class="course">
+		<div class="course-preview">
+			<h6>Attendance</h6>
+			<h1>75%</h1>
+			<a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
+		</div>
+		<div class="course-info">
+			<div class="progress-container">
+				<div class="progress"></div>
+				
+			</div>
+			<h6>semister 3</h6>
+			<h2>Pranay sharma</h2>
+            <h2>PIET21CS127</h2>
+			<button class="btn">Contact</button>
+		</div>
+	</div>
+</div>
+
+<!-- SOCIAL PANEL HTML -->
+<div class="social-panel-container">
+	<div class="social-panel">
+		<p>Created with <i class="fa fa-heart"></i> by
+			<a target="_blank" href="https://florin-pop.com">Florin Pop</a></p>
+		<button class="close-btn"><i class="fas fa-times"></i></button>
+		<h4>Get in touch on</h4>
+		<ul>
+			<li>
+				<a href="https://www.patreon.com/florinpop17" target="_blank">
+					<i class="fab fa-discord"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/florinpop1705" target="_blank">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://linkedin.com/in/florinpop17" target="_blank">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://facebook.com/florinpop17" target="_blank">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://instagram.com/florinpop17" target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<button class="floating-btn">
+	Get in Touch
+</button>
+
+
+  <div class="skills">
+    <h1 class="center"> Subject Attendance</h1>
+    <div class="skillsCont">
+        <div class="title"><p>HTML</p><p>90%</p></div>
+        <div class="slider"><div style="width: 90%;"></div></div>
+    </div>
+    <div class="skillsCont">
+        <div class="title"><p>CSS</p><p>76%</p></div>
+        <div class="slider"><div style="width: 76%;"></div></div>
+    </div>
+    <div class="skillsCont">
+        <div class="title"><p>JavaScript</p><p>82%</p></div>
+        <div class="slider"><div style="width: 82%;"></div></div>
+    </div>
+    <div class="skillsCont">
+        <div class="title"><p>PHP</p><p>67%</p></div>
+        <div class="slider"><div style="width: 67%;"></div></div>
+    </div>
+</div>

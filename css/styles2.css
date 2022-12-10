@@ -1,0 +1,91 @@
+
+.center {
+ text-align: center;
+ background: black;
+ color: #fff;
+ padding: 15px;
+}
+
+.container {
+    margin-top: 10px;
+  }
+  
+  /* Copy the following code to blogger */
+  
+  .main-table {
+    margin:0px 0px 0px 104px;
+    padding: 8px;
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 90%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .main-table th,
+  .main-table td {
+    padding: 12px 18px;
+    border-left: 1px solid #25a186;
+    border-right: 1px solid #25a186;
+  }
+  
+  .main-table thead tr {
+    background: #25a186;
+    color: #fff;
+  }
+  
+  .main-table th {
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .main-table tbody tr:nth-of-type(even) {
+    background: #f1f1f1;
+  }
+  
+  .main-table tbody tr:nth-last-of-type(1) {
+    border-bottom: 3px solid #25a186;
+  }
+
+
+  .submit {
+    position: relative;
+    margin-top: 50px;
+    margin-left:1350px;
+    width: 120px;
+    height: 50px;
+    font-size: 1em;
+    background-color: #25a186;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: width .5s,
+    border-radius .55s;
+}
+.submit *{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity .25s;
+}
+.submit .icon{
+    opacity: 0;
+    font-size: 1.4em;
+}
+.submit .icon, .submit .text {
+    pointer-events: none;
+}
+.submit-animation {
+    width: 50px;
+    background-color: #44c08a;
+    border-radius: 50%;
+}
+.submit-animation .text {
+    opacity: 0;
+}
+.submit-animation .icon {
+    opacity: 1;
+    transition-delay: .5s;
+}

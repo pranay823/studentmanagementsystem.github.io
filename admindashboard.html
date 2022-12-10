@@ -1,0 +1,488 @@
+
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="UTF-8">
+     <title>Student</title>
+      <link rel="stylesheet" href="/css/home.css">
+         <link rel="stylesheet" href="/css/component3.css">
+     <!-- Boxiocns CDN Link -->
+     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ 
+    </head>
+
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/component3.css">
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <span class="logo_name">Student</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#">
+              <i class='bx bx-grid-alt' ></i>
+              <span class="link_name">Dashboard</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Dashboard</a></li>
+            </ul>
+          </li>
+          
+          <li>
+            <div class="iocn-link">
+              <a href="timetable.html">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <span class="link_name">Timetable</span>
+              </a>
+            </div>
+            <ul class="sub-menu">
+              <li><a class="link_name" href="timetable.html">Timetable</a></li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="attendance.html">
+          <i class="fa fa-book" aria-hidden="true"></i>
+              <span class="link_name">Attendance</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="attendance.html">Attendance</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="fee.html">
+            <i class="fa fa-money" aria-hidden="true"></i>
+    
+              <span class="link_name">Fees</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="fee.html">Fees</a></li>
+            </ul>
+          </li>
+         
+        
+          <li>
+            <a href="profile.html">
+           <i class="fa fa-user" aria-hidden="true"></i>
+    
+              <span class="link_name">Profile</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="profile.html">Profile</a></li>
+            </ul>
+          </li>
+          <li>
+        <div class="profile-details">
+          <div class="profile-content"></div>
+            <img src="/image/studentlogo.jpeg" alt ="Image" style="width: 55px; height: 55px;" >
+          </div>
+         
+    
+    
+          </div>
+          
+        </div>
+      </li>
+    </ul>
+      </div>
+
+      <section class="home-section">
+        <div class="home-content">
+          <i class='bx bx-menu' ></i>
+              <p>Home</p>
+           
+              <div class="profile">
+    
+                   <ul style="list-style:none;display: inline-flex;margin-left: 970px;margin-top: 10px;">
+    
+                    <button class="butt-slideshow">
+                      <i class='bx bxs-log-out'></i>logout
+                  </button>
+                    
+                     
+                   </ul>
+                   
+              </div>
+        </div>
+        <div class="header">
+         <ul>
+    
+              <li class="attendence">
+    
+            <i class="fa fa-th-list" aria-hidden="true"></i>
+              <div class="attend">
+                   <a href="attendence/student/index.php"><h3>Attendence <center>list</center></h3></a>
+            
+                   
+              </div>
+              </li>
+              <li class="performance">
+    
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+    
+              <div class="attend">
+                   <a href="performance.html"><h3>Performance of students </h3></a>
+                   
+                   
+              </div>
+                   
+              </li>
+               <li class="email">
+                 <i class="fa fa-money" aria-hidden="true"></i>
+    
+                <div class="fee">
+                   <a href="fee.html"><h3>Fee Due</h3></a>
+                   
+    
+                     
+                </div>
+    
+               </li>
+            <li class="user">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                 <div class="user_id">
+                   <a href="https://mail.google.com/mail/u/0/#inbox" >
+                  <h3>Check Mails</h3>
+                   </a>
+              
+                 </div>
+                
+            </li>
+    
+         </ul>
+         
+             
+        </div>
+        <div class="component2" style="margin-top:15px;">
+            <ul id="component2">
+          <li><div class="my_courses">
+            <h2>My Classes</h2>
+            <div class="buttons">
+      <button class="button1"><a class="prev" onclick="plusSlides(-1)" >&#10094;</a></button>
+      <button  class="button2"><a class="next" onclick="plusSlides(1)" >&#10095;</a></button>
+      </div>
+            
+          </div>
+          <div class="slideshow-container">
+      
+       <div class="mySlides fade" id="card">
+       
+       <h1>Monday</h1>
+       
+                                        <ul>
+                     <table style="width: 100%; margin-top: 15px;">
+                        <tr>
+                           <td>
+                      <div class="one" style="display: flex; box-sizing: border-box;" id="bg">
+                         <h4>09:10 - 10:00</h4><li style="margin-left: 50px;list-style: none;"> <i class="fa fa-book" style="margin-right: 25px; font-size:25px ; color: orange;"></i>First period <br>
+                           <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f1']?></span></h4></li>
+                      </div> </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 10px;">
+                          <h4>10:00 - 10:50</h4><li style="margin-left: 50px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Second period 
+                         <h4 style="margin-top:10px;margin-left: 0px;"><span style="margin-left:0px;"><?php echo $_SESSION['f2']?></h4></li>
+                      </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>11:00 - 11:50</h4><li style="margin-left: 60px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Third period 
+                         <h4 style="margin-top:10px;margin-left: 14px;"><span style="margin-left:0px;"><?php echo $_SESSION['f3']?></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;">
+                         <h4>12:00 - 12:50</h4><li style="margin-left: 50px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Fourth period 
+                         <h4 style="margin-top:10px;margin-left: 14px;"> <span style="margin-left:0px;"><?php echo $_SESSION['f4']?></li>
+                      </div>
+                      </td>
+                      </tr>
+                   <tr>
+                     <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>14:00 - 14:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Fifth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"> <span style="margin-left:0px;"><?php echo $_SESSION['f5']?></li>
+                      </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;">
+                         <h4>15:00 - 15:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> sixth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f3']?></li>
+                      </div>
+                      </td>
+                      </tr>
+                      </table>
+                   </ul>
+      
+      </div>
+      
+      <div class="mySlides fade" id="card">
+        <h1>Tuesday</h1>
+                                        <ul>
+                    <table style="width: 100%; margin-top: 15px;">
+                        <tr>
+                           <td>
+                      <div class="one" style="display: flex; box-sizing: border-box;" id="bg">
+                         <h4>09:10 - 10:00</h4><li style="margin-left: 50px;list-style: none;"> <i class="fa fa-book" style="margin-right: 25px; font-size:25px ; color: orange;"></i>First period <br>
+                           <h4 style="margin-top:10px;margin-left: 20px;"> <span style="margin-left:0px;"><?php echo $_SESSION['f1']?></span></h4></li>
+                      </div> </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 10px;">
+                          <h4>10:00 - 10:50</h4><li style="margin-left: 50px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Second period 
+                         <h4 style="margin-top:10px;margin-left: 0px;"><span style="margin-left:0px;"><?php echo $_SESSION['f3']?></span></h4></li>
+                      </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>11:00 - 11:50</h4><li style="margin-left: 60px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Third period 
+                         <h4 style="margin-top:10px;margin-left: 14px;"><span style="margin-left:0px;"><?php echo $_SESSION['f1']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                
+                   <tr>
+                     <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>14:00 - 14:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Fifth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f5']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;">
+                         <h4>15:00 - 15:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> sixth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f4']?></span></li>
+                      </div>
+                      </td>
+                      </tr>
+                      </table>
+                   </ul>
+      </div>
+      
+      <div class="mySlides fade" id="card">
+        <h1>Wednesday</h1>
+                                         <ul>
+                     <table style="width: 100%; margin-top: 15px;">
+                        <tr>
+                           <td>
+                      <div class="one" style="display: flex; box-sizing: border-box;" id="bg">
+                         <h4>09:10 - 10:00</h4><li style="margin-left: 50px;list-style: none;"> <i class="fa fa-book" style="margin-right: 25px; font-size:25px ; color: orange;"></i>First period <br>
+                           <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f4']?></span></li>
+                      </div> </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 10px;">
+                          <h4>10:00 - 10:50</h4><li style="margin-left: 50px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Second period 
+                         <h4 style="margin-top:10px;margin-left: 0px;"><span style="margin-left:0px;"><?php echo $_SESSION['f1']?></span></h4></li>
+                      </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>11:00 - 11:50</h4><li style="margin-left: 60px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Third period 
+                         <h4 style="margin-top:10px;margin-left: 14px;"><span style="margin-left:0px;"><?php echo $_SESSION['f3']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;">
+                         <h4>12:00 - 12:50</h4><li style="margin-left: 50px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Fourth period 
+                         <h4 style="margin-top:10px;margin-left: 14px;"><span style="margin-left:0px;"><?php echo $_SESSION['f2']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                   <tr>
+                     <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>14:00 - 14:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Fifth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f5']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;">
+                         <h4>15:00 - 15:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> sixth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f3']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      </table>
+                   </ul>
+      </div>
+      <div class="mySlides fade" id="card">
+        <h1>Thursday</h1>
+                                        <ul>
+                    <table style="width: 100%; margin-top: 15px;">
+                        <tr>
+                           <td>
+                      <div class="one" style="display: flex; box-sizing: border-box;" id="bg">
+                         <h4>09:10 - 10:00</h4><li style="margin-left: 50px;list-style: none;"> <i class="fa fa-book" style="margin-right: 25px; font-size:25px ; color: orange;"></i>First period <br>
+                           <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f1']?></span></h4></li>
+                      </div> </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 10px;">
+                          <h4>10:00 - 10:50</h4><li style="margin-left: 50px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Second period 
+                         <h4 style="margin-top:10px;margin-left: 0px;"><span style="margin-left:0px;"><?php echo $_SESSION['f3']?></span></h4></li>
+                      </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>11:00 - 11:50</h4><li style="margin-left: 60px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Third period 
+                         <h4 style="margin-top:10px;margin-left: 14px;"><span style="margin-left:0px;"><?php echo $_SESSION['f2']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                   <tr>
+                     <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>14:00 - 14:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Fifth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f5']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;">
+                         <h4>15:00 - 15:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> sixth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f4']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      </table>
+                   </ul>
+         </div>
+      
+      
+         <div class="mySlides fade" id="card">
+        <h1>Friday</h1>
+                                        <ul>
+                     <table style="width: 100%; margin-top: 15px;">
+                        <tr>
+                           <td>
+                      <div class="one" style="display: flex; box-sizing: border-box;" id="bg">
+                         <h4>09:10 - 10:00</h4><li style="margin-left: 50px;list-style: none;"> <i class="fa fa-book" style="margin-right: 25px; font-size:25px ; color: orange;"></i>First period <br>
+                           <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f5']?></span></h4></li>
+                      </div> </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;" id="bg">
+                         <h4>11:00 - 11:50</h4><li style="margin-left: 60px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Third period 
+                         <h4 style="margin-top:10px;margin-left: 14px;"><span style="margin-left:0px;"><?php echo $_SESSION['f3']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;">
+                         <h4>12:00 - 12:50</h4><li style="margin-left: 50px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> Fourth period 
+                         <h4 style="margin-top:10px;margin-left: 14px;"> <span style="margin-left:0px;"><?php echo $_SESSION['f2']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                 
+                  
+                      <tr>
+                        <td>
+                      <div class="one" style="display: flex; margin-top: 0px;">
+                         <h4>15:00 - 15:50</h4><li style="margin-left: 45px;list-style: none;"><i class="fa fa-book" aria-hidden="true" style="color: orange; font-size: 25px; margin-right: 25px;"></i> sixth period 
+                         <h4 style="margin-top:10px;margin-left: 20px;"><span style="margin-left:0px;"><?php echo $_SESSION['f4']?></span></h4></li>
+                      </div>
+                      </td>
+                      </tr>
+                      </table>
+                   </ul>
+         </div>
+      
+      
+      
+      
+      
+      </div>
+      <br>
+      </li>
+      <li>
+        <div class="articles">
+    
+            
+          </div>
+      
+          
+          <div class="image">
+            <img src="image/about-img.svg" alt="">
+        </div>
+          <div class="library">
+            
+        
+            
+          </div>
+    
+      </div>
+      
+      
+      
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+         
+      
+      
+        </section>
+      
+        <script src="script.js"></script>
+      <script src="popup.js"></script>
+      
+      </body>
+      </html>
+      
